@@ -12,7 +12,7 @@ https://templatemo.com/tm-516-known
     background: #ffffff;
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
-    padding-top: 70px;
+    /* padding-top: 70px; */
   }
 
 
@@ -266,82 +266,157 @@ https://templatemo.com/tm-516-known
       MENU              
   -----------------------------------------*/
   
-  .text-primary { color: #29ca8e; }
+/*** Navbar ***/
+.nav-bar {
+  position: relative;
+  margin-top: 45px;
+  padding: 0 3rem;
+  transition: .5s;
+  z-index: 9999;
+}
 
-  .custom-navbar {
-    background: #ffffff;
-    border-bottom: 0;
-    -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
-    padding: 12px 0;
-    margin-bottom: 0;
-    padding: 0;
+.nav-bar.sticky-top {
+  position: sticky;
+  padding: 0;
+  z-index: 9999;
+}
+
+.navbar {
+  box-shadow: 0 0 30px rgba(0, 0, 0, .08);
+}
+
+.navbar .dropdown-toggle::after {
+  border: none;
+  content: "\f107";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  vertical-align: middle;
+  margin-left: 5px;
+  transition: .5s;
+}
+
+.navbar .dropdown-toggle[aria-expanded=true]::after {
+  transform: rotate(-180deg);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  margin-right: 30px;
+  padding: 25px 0;
+  color: #FFFFFF;
+  font-size: 15px;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+  color: #29ca8e;
+}
+
+@media (max-width: 991.98px) {
+  .nav-bar {
+      margin: 0;
+      padding: 0;
   }
 
-  .custom-navbar .navbar-brand {
-    color: #454545;
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 40px;
+  .navbar-light .navbar-nav .nav-link  {
+      margin-right: 0;
+      padding: 10px 0;
   }
 
-  .custom-navbar .navbar-nav.navbar-nav-first {
-    margin-left: 8em;
+  .navbar-light .navbar-nav {
+      border-top: 1px solid #EEEEEE;
+  }
+}
+
+.navbar-light .navbar-brand {
+  height: 75px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(--dark);
+  font-weight: 500;
+}
+
+@media (min-width: 992px) {
+  .navbar .nav-item .dropdown-menu {
+      display: block;
+      top: 100%;
+      margin-top: 0;
+      transform: rotateX(-75deg);
+      transform-origin: 0% 0%;
+      opacity: 0;
+      visibility: hidden;
+      transition: .5s;
+      
   }
 
-  .custom-navbar .navbar-nav.navbar-right li a {
-    padding-right: 12px;
-    padding-left: 12px;
+  .navbar .nav-item:hover .dropdown-menu {
+      transform: rotateX(0deg);
+      visibility: visible;
+      transition: .5s;
+      opacity: 1;
   }
+}
+/*** Header ***/
+@media (min-width: 992px) {
+  .header {
+      margin-top: -120px;
+  }
+}
 
-  .custom-navbar .navbar-nav.navbar-right li a .fa {
-    background: #29ca8e;
-    border-radius: 100%;
-    color: #ffffff;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    display: inline-block;
-    margin-right: 5px;
-  }
+.header-carousel .owl-nav {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
 
-  .custom-navbar .nav li a {
-    line-height: 40px;
-    color: #575757;
-    padding-right: 22px;
-    padding-left: 22px;
-  }
+.header-carousel .owl-nav .owl-prev,
+.header-carousel .owl-nav .owl-next {
+  margin: 7px 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background:#29ca8e;
+  border-radius: 40px;
+  font-size: 20px;
+  transition: .5s;
+}
 
-  .custom-navbar .navbar-nav > li > a:hover,
-  .custom-navbar .navbar-nav > li > a:focus {
-    background-color: transparent;
-  }
+.header-carousel .owl-nav .owl-prev:hover,
+.header-carousel .owl-nav .owl-next:hover {
+  background: var(--dark);
+}
 
-  .custom-navbar .nav li a:hover {
-    background-color: #29ca8e;
-    color: #ffffff;
+@media (max-width: 768px) {
+  .header-carousel .owl-nav {
+      left: 25px;
   }
+}
 
-  .custom-navbar .nav li.active > a {
-    background-color: #29ca8e;
-    color: #ffffff;
-  }
+.breadcrumb-item + .breadcrumb-item::before {
+  color: #DDDDDD;
+}
 
-  .custom-navbar .navbar-toggle {
-    border: none;
-    padding-top: 10px;
-  }
 
-  .custom-navbar .navbar-toggle {
-    background-color: transparent;
-  }
+/*** Icon ***/
+.icon {
+  padding: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF !important;
+  border-radius: 50px;
+  border: 1px dashed #29ca8e !important;
+}
 
-  .custom-navbar .navbar-toggle .icon-bar {
-    background: #252525;
-    border-color: transparent;
-  }
+
 
 
 
@@ -1016,11 +1091,11 @@ https://templatemo.com/tm-516-known
 
   .team-thumb-actions { padding: 10px; border-top: 1px solid rgba(0,0,0,.05); }
 
-  .section-btn.btn-primary { border-color: #29ca8e; color: #29ca8e; }
-  .section-btn.btn-primary:focus,
-  .section-btn.btn-primary:active,
-  .section-btn.btn-primary:focus:active,
-  .section-btn.btn-primary:hover {background: #29ca8e; color: #fff; border-color: #29ca8e; }
+  .nav-item.btn-primary { border-color: #29ca8e; color: #29ca8e; }
+  .nav-item.btn-primary:focus,
+  .nav-item.btn-primary:active,
+  .nav-item.btn-primary:focus:active,
+  .nav-item.btn-primary:hover {background: #29ca8e; color: #fff; border-color: #29ca8e; }
 
   .courses-thumb .lead,
   .team-info .lead { margin-bottom: 10px; }
