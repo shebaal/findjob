@@ -99,7 +99,7 @@
                                  
                                    <div>
                                         <label>
-                                             <input type="checkbox">
+                                             <input type="checkbox"  name="compa-name" value="all" id="all">
 
                                             All
                                         </label>
@@ -107,16 +107,16 @@
 
                                    <div>
                                         <label>
-                                             <input type="checkbox">
+                                             <input type="checkbox" name="compa-name" value="temmam" id="temmam">
 
-                                           Name1
+                                           Temmam
                                         </label>
                                    </div>
 								    <div>
                                         <label>
-                                             <input type="checkbox">
+                                             <input type="checkbox" name="compa-name" value="amanah" id="amanah">
 
-                                           Name2
+                                           Amanah
                                         </label>
                                    </div>
 
@@ -243,7 +243,7 @@
 
                                              <p class="lead"><strong>$60 000</strong></p>
 
-                                             <p>Fullstack <strong>Developing</strong></p>
+                                             <p>Fullstack <strong class="companies">Temmam</strong></p>
                                         </div>
 
                                         <div class="courses-info">
@@ -270,7 +270,7 @@
 
                                              <p class="lead"><strong>$60 000</strong></p>
 
-                                             <p>Fullstack <strong>Developing</strong></p>
+                                             <p>Fullstack <strong class="companies">Amanah</strong></p>
                                         </div>
 
                                         <div class="courses-info">
@@ -297,7 +297,7 @@
 
                                              <p class="lead"><strong>$60 000</strong></p>
 
-                                             <p>Fullstack <strong>Developing</strong></p>
+                                             <p>Fullstack <strong class="companies">Developing</strong></p>
                                         </div>
 
                                         <div class="courses-info">
@@ -324,7 +324,7 @@
 
                                              <p class="lead"><strong>$60 000</strong></p>
 
-                                             <p>Fullstack <strong>Developing</strong></p>
+                                             <p>Fullstack <strong class="companies">Developing</strong></p>
                                         </div>
 
                                         <div class="courses-info">
@@ -351,7 +351,7 @@
 
                                              <p class="lead"><strong>$60 000</strong></p>
 
-                                             <p>Fullstack <strong>Developing</strong></p>
+                                             <p>Fullstack <strong class="companies">Developing</strong></p>
                                         </div>
 
                                         <div class="courses-info">
@@ -378,7 +378,7 @@
 
                                              <p class="lead"><strong>$60 000</strong></p>
 
-                                             <p>Fullstack <strong>Developing</strong></p>
+                                             <p>Fullstack <strong class="companies">Developing</strong></p>
                                         </div>
 
                                         <div class="courses-info">
@@ -512,6 +512,7 @@
 
      <!-- SCRIPTS -->
      <script>
+          // search filter
           function myFunction() {
     var input, filter,searching, divcard, searchTxt, i, txtValue;
     input = document.getElementById("myInput");
@@ -528,6 +529,8 @@
         }
     }
 }
+
+// checkbox 
      </script>
      <script src="js/jquery.js"></script>
      <script src="js/bootstrap.min.js"></script>
